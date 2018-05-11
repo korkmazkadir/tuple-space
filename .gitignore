@@ -24,3 +24,7 @@ hs_err_pid*
 
 .DS_Store
 
+/TupleSpace/target/
+/TupleSpaceTest/target/
+/TupleSpaceCommon/target/
+/TupleSpaceClient/target/

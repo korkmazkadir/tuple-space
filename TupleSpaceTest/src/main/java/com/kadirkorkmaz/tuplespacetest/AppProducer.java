@@ -23,11 +23,8 @@ public class AppProducer {
         String key = "count";
 
         String keyConsumerReady = "consumer-ready";
-        Boolean consumerReady = true;
 
-        connection.write(keyConsumerReady, consumerReady);
-
-        Integer countValue = 1;
+        Integer countValue = 0;
         while (connection.waitToTake(keyConsumerReady, null) != null) {
             connection.write(key, countValue++);
         }
