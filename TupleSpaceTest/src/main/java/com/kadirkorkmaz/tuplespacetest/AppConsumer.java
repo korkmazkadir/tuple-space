@@ -19,7 +19,7 @@ public class AppConsumer {
 
     public static void main(String[] args) throws RemoteException, NotBoundException {
 
-        TupleSpaceConnection connection = TupleSpaceConnector.GetConnection("127.0.0.1", 2020);
+        TupleSpaceConnection connection = TupleSpaceConnector.GetConnection("167.99.217.243", 2020);
 
         String key = "count";
 

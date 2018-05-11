@@ -25,6 +25,7 @@ public class App {
     public static void main(String[] args) throws IOException {
         
         System.setProperty("java.rmi.server.hostname","167.99.217.243");
+        System.setProperty("java.security.policy","security.policy");
         
         Runtime.getRuntime().exec("rmiregistry 2020");
         LocateRegistry.createRegistry(2020);
