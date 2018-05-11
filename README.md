@@ -21,3 +21,5 @@ It can return null also. This case have to be handled by client code.
 In TupleSpaceTest project you can find example producer-consumer implementation with Tuple Space.
 
 TODO : waitToTake currently is not considering waitDuration parameter. Changing this parameter with a long parameter can be more appropriate.
+
+TODO : TupleSpaceService do not have proper locking mechanism. Contetion on the lock is big. I need to implement better locking mechanism to decrease contention.
