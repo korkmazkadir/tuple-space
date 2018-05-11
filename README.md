@@ -18,3 +18,6 @@ take is removes and returns object from tuple space with key. If there is no obj
 waitToTake will return the object if it is available. Otherwise it will block the calling thread and waits for the object.
 It can return null also. This case have to be handled by client code.
 
+In TupleSpaceTest project you can find example producer-consumer implementation with Tuple Space.
+
+TODO : waitToTake currently is not considering waitDuration parameter. Changing this parameter with a long parameter can be more appropriate.
