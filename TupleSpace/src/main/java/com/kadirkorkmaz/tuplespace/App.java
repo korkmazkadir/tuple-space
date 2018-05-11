@@ -23,6 +23,9 @@ public class App {
     private static final Logger LOGGER = Logger.getLogger(App.class.getName());
 
     public static void main(String[] args) throws IOException {
+        
+        System.setProperty("java.rmi.server.hostname","167.99.217.243");
+        
         Runtime.getRuntime().exec("rmiregistry 2020");
         LocateRegistry.createRegistry(2020);
 
