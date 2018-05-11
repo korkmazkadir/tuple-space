@@ -27,14 +27,14 @@ public class App {
         System.setProperty("java.rmi.server.hostname","167.99.217.243");
         System.setProperty("java.security.policy","security.policy");
         
-        Runtime.getRuntime().exec("rmiregistry 2020");
-        LocateRegistry.createRegistry(2020);
+        Runtime.getRuntime().exec("rmiregistry 80");
+        LocateRegistry.createRegistry(80);
 
         try {
             TupleSpaceService service = new TupleSpaceService();
             TupleSpace spaceStub = (TupleSpace) UnicastRemoteObject.exportObject(service, 0);
 
-            Registry registry = LocateRegistry.getRegistry(2020);
+            Registry registry = LocateRegistry.getRegistry(80);
             registry.bind("tuple-space-service", spaceStub);
 
             System.out.println("Tuple space service is running...");

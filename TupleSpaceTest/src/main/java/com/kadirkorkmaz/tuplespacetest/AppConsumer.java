@@ -19,7 +19,9 @@ public class AppConsumer {
 
     public static void main(String[] args) throws RemoteException, NotBoundException {
 
-        TupleSpaceConnection connection = TupleSpaceConnector.GetConnection("167.99.217.243", 2020);
+        System.setProperty("java.security.policy","security.policy");
+        
+        TupleSpaceConnection connection = TupleSpaceConnector.GetConnection("167.99.217.243", 80);
 
         String key = "count";
 
